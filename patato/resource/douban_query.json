@@ -1,0 +1,77 @@
+{
+  'count': 20,
+  'start': 0,
+  'total': 1,
+  'title': '搜索 "127 hours" 的结果',
+  'subjects': [
+    {
+      'images': {
+        'large': 'http://img6.douban.com/view/movie_poster_cover/lpst/public/p839469694.jpg',
+        'small': 'http://img6.douban.com/view/movie_poster_cover/ipst/public/p839469694.jpg',
+        'medium': 'http://img6.douban.com/view/movie_poster_cover/spst/public/p839469694.jpg'
+      },
+      'year': '2010',
+      'rating': {
+        'stars': '40',
+        'average': 8.1,
+        'max': 10,
+        'min': 0
+      },
+      'genres': [
+        '冒险',
+        '传记',
+        '剧情'
+      ],
+      'directors': [
+        {
+          'alt': 'https://movie.douban.com/celebrity/1054404/',
+          'avatars': {
+            'large': 'http://img6.douban.com/img/celebrity/large/571.jpg',
+            'small': 'http://img6.douban.com/img/celebrity/small/571.jpg',
+            'medium': 'http://img6.douban.com/img/celebrity/medium/571.jpg'
+          },
+          'id': '1054404',
+          'name': '丹尼·博伊尔'
+        }
+      ],
+      'casts': [
+        {
+          'alt': 'https://movie.douban.com/celebrity/1019001/',
+          'avatars': {
+            'large': 'http://img6.douban.com/img/celebrity/large/6610.jpg',
+            'small': 'http://img6.douban.com/img/celebrity/small/6610.jpg',
+            'medium': 'http://img6.douban.com/img/celebrity/medium/6610.jpg'
+          },
+          'id': '1019001',
+          'name': '詹姆斯·弗兰科'
+        },
+        {
+          'alt': 'https://movie.douban.com/celebrity/1009234/',
+          'avatars': {
+            'large': 'http://img6.douban.com/img/celebrity/large/1386855236.97.jpg',
+            'small': 'http://img6.douban.com/img/celebrity/small/1386855236.97.jpg',
+            'medium': 'http://img6.douban.com/img/celebrity/medium/1386855236.97.jpg'
+          },
+          'id': '1009234',
+          'name': '丽兹·卡潘'
+        },
+        {
+          'alt': 'https://movie.douban.com/celebrity/1031801/',
+          'avatars': {
+            'large': 'http://img6.douban.com/img/celebrity/large/33522.jpg',
+            'small': 'http://img6.douban.com/img/celebrity/small/33522.jpg',
+            'medium': 'http://img6.douban.com/img/celebrity/medium/33522.jpg'
+          },
+          'id': '1031801',
+          'name': '凯特·玛拉'
+        }
+      ],
+      'alt': 'https://movie.douban.com/subject/4164444/',
+      'collect_count': 99416,
+      'title': '127小时',
+      'subtype': 'movie',
+      'original_title': '127 Hours',
+      'id': '4164444'
+    }
+  ]
+}

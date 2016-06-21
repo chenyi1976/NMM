@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {% load staticfiles %}
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'image/favicon.png' %}"/>
+    <link rel="apple-touch-icon" href="{% static 'image/favicon_64.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {#jquery#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    {#bootstrap#}
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    {#jquery ui#}
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <script src="{% static 'js/confirm.js' %}"></script>
+
+    {% block head %}{% endblock %}
+
+    <title>Query Movie</title>
+</head>
+
+<body>
+<div style="display:none;" ><img src="{% static 'image/favicon_512.png' %}" /></div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hermes</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/order">Order</a></li>
+                <li><a href="/person">Person</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/accounts">Admin</a></li>
+                <li><a href="/accounts/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="content" class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

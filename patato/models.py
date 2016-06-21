@@ -10,6 +10,10 @@ class MovieRole(models.Model):
     name = models.CharField('角色', max_length=20)
 
 
+class Gene(models.Model):
+    name = models.CharField('类型', max_length=20)
+
+
 class Movie(models.Model):
     name = models.CharField('片名', max_length=100)
     intro = models.TextField('简洁', blank=True, null=True)
@@ -18,6 +22,7 @@ class Movie(models.Model):
     imdb = models.CharField(max_length=15, null=True)
     douban = models.CharField(max_length=15, null=True)
     tags = TaggableManager()
+    enabled = models.BooleanField(default=True)
 
 
 class Aka(models.Model):
@@ -29,3 +34,8 @@ class MoviePerson(models.Model):
     movie = models.ForeignKey(Movie)
     person = models.ForeignKey(Person)
     role = models.ForeignKey(MovieRole)
+
+
+class MovieGene(models.Model):
+    movie = models.ForeignKey(Movie)
+    gene = models.ForeignKey(Gene)
