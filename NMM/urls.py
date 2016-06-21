@@ -18,6 +18,6 @@ from django.contrib import admin
 from patato import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', admin.site.urls),
     url(r'^query_movie/', views.query_movie),
 ]

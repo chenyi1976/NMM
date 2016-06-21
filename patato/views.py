@@ -24,17 +24,20 @@ def query_movie(request):
                     m_alt = subject['alt']
                     m_year = subject['year']
                     m_genres = subject['genres']
-                    m = Movie(name=m_title, douban=m_id, year=m_year)
-                    m.save()
-                    if m_genres:
-                        for gene_name in m_genres:
-                            try:
-                                gene = Gene.objects.get(name=gene_name)
-                            except:
-                                gene = Gene(name=gene_name)
-                                gene.save()
-                            mg = MovieGene(movie=m, gene=gene)
-                            mg.save()
+                    try:
+                        m = Movie.objects.get(douban=m_id)
+                    except:
+                        m = Movie(name=m_title, original_name=m_original_title, douban=m_id, year=m_year, enabled=False)
+                        m.save()
+                        if m_genres:
+                            for gene_name in m_genres:
+                                try:
+                                    gene = Gene.objects.get(name=gene_name)
+                                except:
+                                    gene = Gene(name=gene_name)
+                                    gene.save()
+                                mg = MovieGene(movie=m, gene=gene)
+                                mg.save()
                     movies.append({m_id: m_title})
     else:
         pass
