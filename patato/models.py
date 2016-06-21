@@ -24,11 +24,11 @@ class Movie(models.Model):
     name = models.CharField('片名', max_length=100)
     original_name = models.CharField('原名', max_length=100, blank=True, null=True)
     intro = models.TextField('简介', blank=True, null=True)
-    storage_folder = models.FilePathField('目录', null=True)
-    year = models.IntegerField('年份', null=True)
-    imdb = models.CharField(max_length=15, null=True)
-    douban = models.CharField(max_length=15, null=True)
-    tags = TaggableManager()
+    storage_folder = models.FilePathField('目录', blank=True, null=True)
+    year = models.IntegerField('年份', blank=True, null=True)
+    imdb = models.CharField(max_length=15, blank=True, null=True)
+    douban = models.CharField(max_length=15, blank=True, null=True)
+    tags = TaggableManager(blank=True)
     enabled = models.BooleanField(default=True)
 
     def __str__(self):

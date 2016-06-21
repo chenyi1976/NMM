@@ -6,8 +6,19 @@
         <input type="text" name="q" value="{{ q }}"/>
         <input type="submit" value="Query"/>
     </form>
-    {% for movie in movies %}
-        <li>{{ movie }}</li>
-    {% endfor %}
+    {% if movies %}
+        Please choose movies you want to import:
+        <form action="/import_movie" method="post">
+
+        {% for movie in movies %}
+            <input type="checkbox" name="vehicle" value="{{ movie.0 }}"> {{ movie.1 }}
+            {% if movie.2 %}
+                <span class="glyphicon glyphicon-ok" style="color:blue"></span>
+            {% endif %}
+            <br>
+        {% endfor %}
+
+        <input type="submit" value="Input"/>
+    {% endif %}
 
 {% endblock %}

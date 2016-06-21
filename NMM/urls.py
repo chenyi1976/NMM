@@ -20,4 +20,5 @@ from patato import views
 urlpatterns = [
     url(r'^accounts/', admin.site.urls),
     url(r'^query_movie/', views.query_movie),
+    url(r'^import_movie/', views.import_movie),
 ]
