@@ -1,0 +1,30 @@
+{% extends "patato/base.html" %}
+
+{% block content %}
+
+    <a type="button" class="btn btn-primary" href="/movie_list">Only Show Enabled</a>
+    <a type="button" class="btn btn-primary" href="/movie_list/all">Show All</a>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>名称</th>
+            <th>原名</th>
+            <th>豆瓣</th>
+            <th>年份</th>
+        </tr>
+        {% for movie in object_list %}
+            <tr>
+                <td>
+                    <a type="button" class="btn btn-primary" href="/movie/detail/{{ movie.id }}">{{ movie.name }}</a>
+                </td>
+                <td>{{ movie.original_name }}</td>
+                <td>
+                    <a type="button" class="btn btn-primary" href="https://movie.douban.com/subject/{{ movie.douban }}" target="_blank">{{ movie.douban }}
+                        <span class="glyphicon glyphicon-new-window" style="color:lightblue"></span>
+                    </a>
+                </td>
+                <td>{{ movie.year }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

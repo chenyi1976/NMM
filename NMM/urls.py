@@ -13,12 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
-from patato import views
+
+from patato.models import *
 
 urlpatterns = [
     url(r'^accounts/', admin.site.urls),
-    url(r'^query_movie/', views.query_movie),
-    url(r'^import_movie/', views.import_movie),
+    url(r'^', include('patato.urls', namespace='p')),
 ]
